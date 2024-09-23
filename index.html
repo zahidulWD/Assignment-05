@@ -5,19 +5,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Document</title>
+    <title>Donate</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- Font Awesome-CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google-Font(Lexend) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"  rel="stylesheet">
+
     <!-- Daisy-UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(180, 244, 97)',
+                        secondary: 'rgb(249, 247, 243)',
+                        bgHover:'rgba(17, 17, 17, 0.05)',
+                    },
+                    fontFamily: {
+                        Poppins: 'Lexend',
+                    },
+                    backgroundImage: {
+                      leaf1: "url('./images/leaf01.png')",
+                      call_to_action: "url('./images/call.jpg')",
+                      testimonials: "url('./images/testimonials.jpg')",
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
+<body class="font-Lexend">
+    <!-- header section start here -->
+    <header class="bg-secondary">
+        <nav class="w-11/12 mx-auto h-24">
+            <div class="navbar p-0 py-3">
+                <div class="navbar-start">
+                    <button
+                    id="blog" 
+                    class="btn text-black text-xl font-semibold leading-6 tracking-normal text-left bg-primary border-none hover:bgHover">Blog</button>
+                </div>
+                <div class="navbar-center hidden lg:flex gap-5 items-center">
+                  <img src="assets/logo.png" alt="">
+                  <h2 class="text-black text-xl font-bold leading-6 tracking-normal text-left right-2 flex justify-between items-center">Donate Bangladesh</h2>
+                </div>
+                <div class="navbar-end">
+                  <div class="flex items-center gap-5 font-lg ">
+                    <button class="flex items-center gap-2 font-semibold text-accent">
+                     <img src="assets/coin.png" alt="coin">
+                    </button>
+                    <button>
+                        <span
+                        id="nav-BDT" 
+                        class="text-xl font-medium leading-6 tracking-normal text-left">5500 BDT</span>
+                    </button>
+                  </div>
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <i class="fa-solid fa-bars"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <!-- header section end -->
     <!-- main section start here -->
-     <main>
-        <!-- navbar start here -->
-       
-        <!-- navbar ends -->
-     </main>
-    <!-- main section ends -->
+    <main>
+        <!-- Donation/History button -->
+        <div class="flex justify-center items-center space-x-4 mt-14">
+            <div><button 
+                id="Donation"
+                class="btn btn-active bg-primary border-none text-black text-xl font-semibold leading-6 tracking-normal text-left px-8 py-3">Donation</button></div>
+
+            <div><button
+                id="History" 
+                class="btn btn-outline bg-transparent hover:bgHover text-xl font-medium leading-6 tracking-normal text-left  border-2 border-gray-300 px-8 py-3">History</button></div>
+        </div>
+
+        <!-- Donate for Flood section -->
+        <!-- Noakhali section start here -->
+        <div class="bg-white">
+            <div class="hero mt-12">
+                <div class="hero-content flex-col lg:flex-row gap-8 mb-12 border-2 border-gray-200">
+                  <img
+                    src="assets/noakhali.png" />
+
+                    <!-- Flood section Title -->
+                  <div>
+                    <div>
+                        <button class="btn mb-4 text-base font-bold leading-5 tracking-normal text-left"><img src="assets/coin.png" alt="">0 BDT</button>
+                    </div>
+                    <h1 class="text-black text-xl font-bold leading-7 tracking-normal text-left">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-6 text-gray-500 font-semibold leading-6 tracking-normal text-left">
+                        The recent floods in Noakhali have caused significant damage to  homes <br>  infrastructure. Your donation will help provide essential supplies and <br>  to those affected by this disaster. Every contribution, big or small, makes <br> difference. Please join us in supporting the relief efforts and making a <br> positive impact on the lives of those in need.
+                    </p>
+                    <!-- input-md -->
+                    <div class="flex flex-col lg:flex-col">
+                        <input
+                       id="input"
+                       type="text"
+                       placeholder="Write Donation Amount"
+                       class="input input-bordered input-md w-full max-w-xs box-border rounded-lg bg-white" />
+                       <button class="btn btn-block btn btn-active bg-primary border-none text-black text-xl font-semibold leading-6 tracking-normal mt-4">Donate Now</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        <!-- Noakhali section ends -->
+
+        <!-- Feni section start here -->
+        <div class="bg-white">
+            <div class="hero mt-12">
+                <div class="hero-content flex-col lg:flex-row gap-8 mb-12 border-2 border-gray-200">
+                  <img
+                    src="assets/feni.png" />
+
+                    <!-- Flood section Title -->
+                  <div>
+                    <div>
+                        <button class="btn mb-4 text-base font-bold leading-5 tracking-normal text-left"><img src="assets/coin.png" alt="">600 BDT</button>
+                    </div>
+                    <h1 class="text-black text-xl font-bold leading-7 tracking-normal text-left">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="py-6 text-gray-500 font-semibold leading-6 tracking-normal text-left">
+                        The recent floods in Noakhali have caused significant damage to  homes <br>  infrastructure. Your donation will help provide essential supplies and <br>  to those affected by this disaster. Every contribution, big or small, makes <br> difference. Please join us in supporting the relief efforts and making a <br> positive impact on the lives of those in need.
+                    </p>
+                    <!-- input-md -->
+                    <div class="flex flex-col lg:flex-col">
+                        <input
+                       id="input"
+                       type="text"
+                       placeholder="Write Donation Amount"
+                       class="input input-bordered input-md w-full max-w-xs box-border rounded-lg bg-white" />
+                       <button class="btn btn-block btn btn-active bg-primary border-none text-black text-xl font-semibold leading-6 tracking-normal mt-4">Donate Now</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        <!-- Feni section end -->
+        <!-- Quota section start here -->
+        <div class="bg-white">
+            <div class="hero mt-12">
+                <div class="hero-content flex-col lg:flex-row gap-8 mb-12 border-2 border-gray-200">
+                  <img
+                    src="assets/quota-protest.png" />
+
+                    <!-- Flood section Title -->
+                  <div>
+                    <div>
+                        <button class="btn mb-4 text-base font-bold leading-5 tracking-normal text-left"><img src="assets/coin.png" alt="">2400 BDT</button>
+                    </div>
+                    <h1 class="text-black text-xl font-bold leading-7 tracking-normal text-left">Aid for Injured in the Quota Movement</h1>
+                    <p class="py-6 text-gray-500 font-semibold leading-6 tracking-normal text-left">
+                        The recent floods in Noakhali have caused significant damage to  homes <br>  infrastructure. Your donation will help provide essential supplies and <br>  to those affected by this disaster. Every contribution, big or small, makes <br> difference. Please join us in supporting the relief efforts and making a <br> positive impact on the lives of those in need.
+                    </p>
+                    <!-- input-md -->
+                    <div class="flex flex-col lg:flex-col">
+                        <input
+                       id="input"
+                       type="text"
+                       placeholder="Write Donation Amount"
+                       class="input input-bordered input-md w-full max-w-xs box-border rounded-lg bg-white" />
+                       <button class="btn btn-block btn btn-active bg-primary border-none text-black text-xl font-semibold leading-6 tracking-normal mt-4">Donate Now</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        <!-- Quota section end -->
+    </main>
+    <!-- main section end -->
     <script src="js/script.js"></script>
 </body>
 </html>
