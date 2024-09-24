@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Donate</title>
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- Font Awesome-CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google-Font(Lexend) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"  rel="stylesheet">
+
+    <!-- Daisy-UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(180, 244, 97)',
+                        secondary: 'rgb(249, 247, 243)',
+                        bgHover:'rgba(17, 17, 17, 0.05)',
+                    },
+                    fontFamily: {
+                      'lexend': "'Lexend', sans-serif",
+                    },
+
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-Lexend">
+    <!-- header section -->
+    <header>
+        <div class="header-top pt-4 pb-10 md:pt-6 md:pb-16 bg-secondary">
+            <nav class="w-11/12 mx-auto h-18 ">
+              <div class="navbar p-0 py-3">
+                  <div class="navbar-start">
+                      <button
+                      id="home-btn" 
+                      class="btn text-black text-xl font-semibold leading-6 tracking-normal text-left bg-primary border-none hover:bgHover px-8 py-3">Home</button>
+                  </div>
+                  <div class="navbar-center hidden lg:flex gap-5 items-center">
+                    <img src="assets/logo.png" alt="">
+                    <h2 class="text-black text-xl font-bold leading-6 tracking-normal text-left right-2 flex justify-between items-center">Donate Bangladesh</h2>
+                  </div>
+                  <div class="navbar-end">
+                    <div class="flex items-center gap-5 font-lg ">
+                      <img src="assets/coin.png" alt="">
+                      <button>
+                          <span
+                          id="nav-BDT" 
+                          class="text-xl font-medium leading-6 tracking-normal text-left"><span id="total-amount">5500</span> BDT</span>
+                      </button>
+                    </div>
+                    <div class="dropdown">
+                      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </nav>
+          </div>
+    </header>
+    <!-- main section -->
+    <main>
+       <!-- accordion -->
+       <div class="w-11/12 mx-auto mt-12 mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Important faq ?</h2>
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+       </div>
+    </main>
+    <footer class="footer footer-center bg-secondary text-base-content rounded p-8"></footer>
+    <script src="js/script.js"></script>
+
+    <script>
+
+      document.getElementById("home-btn").addEventListener("click", function(){
+          window.location.href ="index.html";
+          console.log("blocked clicked")
+      });
+  
+      </script>
+</body>
+</html>
