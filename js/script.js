@@ -31,6 +31,8 @@ donationBtn.addEventListener("click",function(){
     );
     const donationSection = tabButtonId("donation-section");
     donationSection.classList.remove("hidden");
+
+    document.getElementById("history-container").classList.add("hidden");
 });
 
 // donation_section start here
@@ -66,7 +68,20 @@ document.getElementById("donate-btn1").addEventListener("click",function(event){
     const closeInfoButton = document.getElementById("close-info-btn1");
     closeInfoButton.addEventListener("click",function(){
         congratsSection.classList.add("hidden");
-    })
+    });
+
+    // date and time
+    const dateToday = new Date();
+    // history section
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput1}Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
+        <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+
+    `
+    document.getElementById("inr-history-container").appendChild(div);
 
 
 });
@@ -105,6 +120,20 @@ document.getElementById("donate-btn2").addEventListener("click",function(event){
         congratsSection.classList.add("hidden");
     });
 
+    // date and time
+    const dateToday = new Date();
+    // history section
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput2} Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
+        <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+
+    `
+    document.getElementById("inr-history-container").appendChild(div);
+
+
 });
 
 // donate section-01
@@ -139,8 +168,20 @@ document.getElementById("donate-btn3").addEventListener("click",function(event){
     const closeInfoButton = document.getElementById("close-info-btn1");
     closeInfoButton.addEventListener("click",function(){
         congratsSection.classList.add("hidden");
-    })
+    });
 
+    // date and time
+    const dateToday = new Date();
+    // history section
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+        <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+
+    `
+    document.getElementById("inr-history-container").appendChild(div);
 
 });
 
